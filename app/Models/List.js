@@ -13,7 +13,7 @@ export class List {
     <div class="row card m-1 mt-2 mb-2" style="width: 300px;">
       <div class="card-text">
         <div class="col-12 text-between">
-          <h4 class="p-3">${this.name}</h4>
+          <h4 sytle="background-color:${this.color}" class="p-3">${this.name}</h4>
           </div>
           <div class="container" style="height: 700px;">
           <div class="col-12">
