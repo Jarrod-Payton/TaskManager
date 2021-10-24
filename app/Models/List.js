@@ -16,19 +16,19 @@ export class List {
           <h4 class="p-3">${this.name}</h4>
           </div>
           <div class="container" style="height: 700px;">
-          ${this.getTasks}
+          ${ProxyState.Tasks[this.id]}
           </div>
-          </div>
-          <div class="col-12">
-          <form onsubmit="app.taskController.createTask('${this.id}')">
-          <input type="text" class="form-control" name="taskName" placeholder="Add Task">
-          <div></div>
-          <button class="btn btn-primary mt-2" type="button">Add Task</button>
-          </form>
-          </div>
-          </div>
-          <button type="button" class="btn btn-danger mt-2" onclick = "app.listController.DeleteList('${this.id}')"><b>Delete List</b></button>
-          </div>
-          </div>`
+          </div >
+  <div class="col-12">
+    <form onsubmit="app.taskController.createTask('${this.id}')">
+      <input type="text" class="form-control" name="taskName" id="taskName" placeholder="Add Task">
+      <div></div>
+      <button class ="btn btn-primary mt-2" type ="button">Add Task</button>
+    </form>
+  </div>
+          </div >
+  <button type="button" class="btn btn-danger mt-2" onclick="app.listController.DeleteList('${this.id}')"><b>Delete List</b></button>
+          </div >
+          </div > `
   }
 }

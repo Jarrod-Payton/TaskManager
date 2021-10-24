@@ -2,7 +2,7 @@ import { generateId } from "../Utils/generateId.js";
 
 export class Task {
   constructor(data) {
-    this.name = data.name.value
+    this.name = data.name
     this.id = data.id || generateId()
   }
   get Template() {
