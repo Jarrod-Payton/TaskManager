@@ -1,21 +1,11 @@
 import { List } from "./Models/List.js"
+import { Task } from "./Models/Task.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
-const TestList = new List({
-  name: "TestList"
-})
-const TestList2 = new List({
-  name: "TestList"
-})
-const TestList3 = new List({
-  name: "TestList"
-})
-
-
-
 class AppState extends EventEmitter {
-  lists = [TestList, TestList2, TestList3]
+  lists = []
+  Tasks = []
 
   Console(Howdy) {
     console.log(Howdy)

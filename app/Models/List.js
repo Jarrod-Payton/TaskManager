@@ -12,32 +12,17 @@ export class List {
     <div class="col-6 col-md-3">
     <div class="row card m-1 mt-2 mb-2" style="width: 300px;">
       <div class="card-text">
-        <div class="col-12 text-between">
-          <h4 sytle="background-color:${this.color}" class="p-3">${this.name}</h4>
+        <div class="col-12 text-between" style="background-color:${this.color}">
+          <h4 class="p-3">${this.name}</h4>
           </div>
           <div class="container" style="height: 700px;">
-          <div class="col-12">
-          <h5>Item</h5>
-          </div>
-          <div class="col-12">
-          <h5>Item</h5>
-          </div>
-          <div class="col-12">
-          <h5>Item</h5>
-          </div>
-          <div class="col-12">
-          <h5>Item</h5>
-          </div>
-          <div class="col-12">
-          <h5>Item</h5>
-          </div>
-          <div class="col-12">
-          <h5>Item</h5>
+          ${this.getTasks}
           </div>
           </div>
           <div class="col-12">
-          <form onsubmit="app.taskController.addTask('${this.id}')">
+          <form onsubmit="app.taskController.createTask('${this.id}')">
           <input type="text" class="form-control" name="taskName" placeholder="Add Task">
+          <div></div>
           <button class="btn btn-primary mt-2" type="button">Add Task</button>
           </form>
           </div>

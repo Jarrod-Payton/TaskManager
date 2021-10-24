@@ -5,13 +5,13 @@ function _update() {
   let list = ProxyState.lists
   let template = ''
   list.forEach(p => template += p.Template)
-  list.forEach(p => console.log(p.id))
   document.getElementById('app').innerHTML = template
 }
 
 export class ListController {
   constructor() {
     ProxyState.on('lists', _update)
+    ProxyState.on('Tasks', _update)
     _update()
   }
 
