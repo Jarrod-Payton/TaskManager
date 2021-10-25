@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js";
 import { generateId } from "../Utils/generateId.js";
 
 export class Task {
@@ -6,7 +7,7 @@ export class Task {
     this.listID = data.listID
     this.id = generateId()
     this.Template = `${this.Template()}`
-    this.completed = false
+    this.completed = data.completed || false
   }
   Template() {
     return `
