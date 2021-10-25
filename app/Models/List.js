@@ -40,12 +40,27 @@ export class List {
 
   TaskCounter() {
     let total = 0
+    let completed = 0
     for (let t = 0; t < ProxyState.Tasks.length; t++) {
       if (ProxyState.Tasks[t].listID == this.id) {
         total++
+        if (ProxyState.Tasks[t].completed == true) {
+          completed++
+          ProxyState.Tasks[c].Template = `
+          <div class="col-12 m-1 pe-5">
+          <div class="bg-success text-center p-2">
+          <button class="btn btn-success btn-small" disabled>Completed</button>
+          <div class="card text-start ps-2" style="min-height=100px">
+          <div class="card-text">
+          <p>${ProxyState.Tasks[c].name}</p>
+          </div>
+          </div>
+          <button class="btn btn-danger btn-small p-2" onclick = "app.taskController.deleteTask('${ProxyState.Tasks[c].id}')">Delete Task</button>
+          </div>
+          </div>`
+        }
       }
     }
-    let completed = 0
     for (let c = 0; c < ProxyState.Tasks.length; c++) {
       if (ProxyState.Tasks[c].completed == true) {
         completed++
