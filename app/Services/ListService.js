@@ -12,6 +12,7 @@ class ListService {
 
   DeleteList(id) {
     ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
+    ProxyState.Tasks = ProxyState.Tasks.filter(t => t.listID != id)
   }
 }
 

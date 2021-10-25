@@ -6,10 +6,6 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   lists = []
   Tasks = []
-
-  Console(Howdy) {
-    console.log(Howdy)
-  }
 }
 
 export const ProxyState = new Proxy(new AppState(), {
