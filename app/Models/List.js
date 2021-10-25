@@ -39,7 +39,12 @@ export class List {
   }
 
   TaskCounter() {
-    let total = ProxyState.Tasks.length
+    let total = 0
+    for (let t = 0; t < ProxyState.Tasks.length; t++) {
+      if (ProxyState.Tasks[t].listID == this.id) {
+        total++
+      }
+    }
     let completed = 0
     for (let c = 0; c < ProxyState.Tasks.length; c++) {
       if (ProxyState.Tasks[c].completed == true) {
